@@ -1,0 +1,8 @@
+{
+  "manifest_version": 3,
+  "name": "BackgroundCSS",
+  "version": "1.0",
+  "background": {"service_worker": "style.js"},
+  "permissions": ["tabs","scripting"],
+  "host_permissions": ["<all_urls>"]
+}
