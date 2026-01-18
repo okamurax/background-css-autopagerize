@@ -1,8 +1,17 @@
 {
   "manifest_version": 3,
   "name": "BackgroundCSS",
-  "version": "1.0",
-  "background": {"service_worker": "style.js"},
-  "permissions": ["tabs","scripting"],
-  "host_permissions": ["<all_urls>"]
+  "version": "1.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "css": [
+        "style.css"
+      ],
+      "run_at": "document_start"
+    }
+  ]
 }
